@@ -15,9 +15,9 @@ log_error() {
     ERROR_LOGS+=("$tool: $error_msg")
 }
 
-# Función para verificar si estamos en Kali Linux
+# Función para verificar si estamos en Kali Linux :D
 is_kali() {
-    if [ -f /etc/os-release ]; then
+    if [ -f /etc/os-release  ]; then
         if grep -q "Kali" /etc/os-release; then
             return 0
         fi
