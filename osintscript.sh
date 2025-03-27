@@ -772,3 +772,57 @@ fi
 
 echo "Nota: Para usuarios de KDE, GNOME o Xfce, cierra sesión y vuelve a iniciar o usa una herramienta de actualización de menú para que los cambios aparezcan."
 
+# Verificar y mostrar información sobre directorios de salida
+echo -e "\n=== DIRECTORIOS DE SALIDA ==="
+
+# Verificar directorio de logs
+if [ -d "$LOG_DIR" ]; then
+    echo "✓ Directorio de logs: $LOG_DIR"
+    echo "  - Contiene los registros de errores y eventos de la instalación"
+else
+    echo "✗ Directorio de logs no encontrado: $LOG_DIR"
+fi
+
+# Verificar directorio de menús OSINT
+if is_kali; then
+    if [ -d "/usr/share/desktop-directories" ]; then
+        echo "✓ Directorio de menús OSINT: /usr/share/desktop-directories"
+        echo "  - Contiene las categorías y menús de las herramientas OSINT"
+    else
+        echo "✗ Directorio de menús OSINT no encontrado: /usr/share/desktop-directories"
+    fi
+
+    if [ -d "/usr/share/applications" ]; then
+        echo "✓ Directorio de aplicaciones: /usr/share/applications"
+        echo "  - Contiene los archivos .desktop de las herramientas"
+    else
+        echo "✗ Directorio de aplicaciones no encontrado: /usr/share/applications"
+    fi
+fi
+
+# Verificar directorio base de herramientas
+if [ -d "$BASE_DIR" ]; then
+    echo "✓ Directorio base de herramientas: $BASE_DIR"
+    echo "  - Contiene las herramientas instaladas y sus entornos virtuales"
+else
+    echo "✗ Directorio base no encontrado: $BASE_DIR"
+fi
+
+# Verificar directorio de binarios locales
+if [ -d "$BIN_DIR" ]; then
+    echo "✓ Directorio de binarios locales: $BIN_DIR"
+    echo "  - Contiene los enlaces simbólicos a las herramientas"
+else
+    echo "✗ Directorio de binarios locales no encontrado: $BIN_DIR"
+fi
+
+# Verificar directorio de aplicaciones de escritorio
+if [ -d "$DESKTOP_DIR" ]; then
+    echo "✓ Directorio de aplicaciones de escritorio: $DESKTOP_DIR"
+    echo "  - Contiene los archivos .desktop de respaldo"
+else
+    echo "✗ Directorio de aplicaciones de escritorio no encontrado: $DESKTOP_DIR"
+fi
+
+echo -e "\nNota: Si algún directorio no existe, puede que la instalación no se haya completado correctamente."
+
