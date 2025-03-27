@@ -1,72 +1,145 @@
-# Bash script for OSINTk.o tools 
+# OSINT Script para Kali Linux
 
-OSINTkoSCR is a streamlined installation script designed for setting up a customized OSINT toolkit on Kali Linux. The script installs a curated selection of OSINT tools, ranging from username lookups to social media analysis, and creates menu entries for quick access. 
+Este script automatiza la instalación y configuración de herramientas OSINT en Kali Linux, organizándolas en categorías específicas en el menú de aplicaciones.
 
-While OSINTkoSCR was initially designed for the OSINTko Kali ISO, it is flexible and can be modified to work on other Linux distributions. Some adjustments to paths or dependencies may be required based on the environment.
+## Características
 
+- Instalación automática de herramientas OSINT
+- Organización en categorías en el menú de Kali Linux
+- Gestión de dependencias y entornos virtuales
+- Actualización automática de herramientas existentes
+- Verificación de funcionalidad post-instalación
+- Sistema de registro de errores detallado
 
-## Table of Contents
-- [Features](#features)
-- [Installation](#installation)
-- [Tools](#tools)
-- [Notes](#notes)
+## Requisitos
 
----
+- Kali Linux (recomendado) o sistema basado en Debian
+- Python 3.x
+- Git
+- pip y pipx
+- python3-venv
 
-## Features
-- **Automated Installation**: Automatically clones, installs, and configures various OSINT tools from GitHub repositories.
-- **Virtual Environments**: Each tool is installed in its own isolated Python virtual environment to prevent dependency conflicts.
-- **System Menu Integration**: Creates `.desktop` entries to allow launching tools directly from the system application menu.
-- **Pipx Support**: Installs and configures pipx tools, providing system-wide executables for selected OSINT utilities.
+## Instalación
 
-## Installation
-To set up OSINTkoSCR, follow these steps:
+1. Clona este repositorio:
+```bash
+git clone https://github.com/tu-usuario/OsintKaliInstaller.git
+cd OsintKaliInstaller
+```
 
-1. **Clone the Repository and run the script**:
-   ```bash
-   git clone https://github.com/LinaYorda/osintkoSCR.git
-   cd osintkoSCR
-   bash ./osintkoSCR.sh
+2. Dale permisos de ejecución al script:
+```bash
+chmod +x osintscript.sh
+```
 
-## Tools
-The following tools are included:
+3. Ejecuta el script:
+```bash
+./osintscript.sh
+```
 
-### Username
+## Categorías y Herramientas
 
+### 1. Username
+Herramientas para búsqueda de nombres de usuario en diferentes plataformas:
+- Blackbird
+- AliensEye
+- UserFinder
+- Sherlock
+- Maigret
+- socialscan
+- social-analyzer
+- nexfil
+- whatsmyname
 
-- [Aliens Eye](https://github.com/arxhr007/Aliens_eye)
-- [Blackbird](https://github.com/p1ngul1n0/blackbird)
-- [Nexfil](https://github.com/thewhiteh4t/nexfil)
-- [Social-Analyzer](https://github.com/qeeqbox/social-analyzer)
-- [Socialscan](https://github.com/iojw/socialscan)
+### 2. Email
+Herramientas para búsqueda y análisis de correos electrónicos:
+- Eyes
+- Profil3r
+- Zehef
+- EmailHarvester
+- H8mail
+- holehe
+- ghunt
 
-### Phone number 
+### 3. Phone
+Herramientas para búsqueda de información relacionada con números de teléfono:
+- PhoneInfoga
+- Inspector
+- Phunter
 
-- [Findigo](https://github.com/De-Technocrats/findigo)
-- [Inspector](https://github.com/N0rz3/Inspector)
-- [Phunter](https://github.com/N0rz3/Phunter)
-- [No-Infoga](https://github.com/akashblackhat/no-infoga.py)
+### 4. Social
+Herramientas para análisis de redes sociales:
+- GitSint
+- Masto
+- Osintgram
+- twint
+- instaloader
+- toutatis
 
-### Email
+### 5. Domain
+Herramientas para análisis de dominios:
+- DNSRecon
+- Photon
 
-- [Eyes](https://github.com/N0rz3/Eyes)
-- [Holehe](https://github.com/megadose/holehe)
-- [Zehef](https://github.com/N0rz3/Zehef)
-- [GHunt](https://github.com/mxrch/GHunt)
+### 6. Framework
+Herramientas framework para OSINT:
+- Spiderfoot
 
-### Social Media
+### 7. Recon
+Herramientas de reconocimiento general:
+- TheHarvester
+- osint
+- shodan
 
-- [GitSint](https://github.com/N0rz3/GitSint)
-- [Instaloader](https://github.com/instaloader/instaloader)
-- [Masto](https://github.com/C3n7ral051nt4g3ncy/Masto)
-- [Osgint](https://github.com/hippiiee/osgint)
-- [Toutatis](https://github.com/megadose/toutatis)
+## Estructura de Directorios
 
-## Notes
+```
+$HOME/
+└── OSINTko/
+    ├── [Herramientas instaladas]
+    └── logs/
+```
 
-- Desktop Directories: For the .desktop entries to work effectively, ensure you have a desktop-directories structure created. This is typically pre-configured in environments like XFCE but may require additional setup on others.
+## Solución de Problemas
 
-- Customization: OSINTkoSCR is a flexible, universal script that can be modified to add additional tools by including them in the script’s tool arrays. Users are encouraged to add their own OSINT tools and categories as desired.
+Si encuentras errores durante la instalación:
+
+1. **Errores de Entorno Virtual**:
+   - Instala python3-venv: `sudo apt install python3-venv`
+   - Verifica permisos del directorio
+   - Crea el entorno virtual manualmente
+
+2. **Errores de Dependencias**:
+   - Actualiza pip: `pip install --upgrade pip`
+   - Verifica compatibilidad de versiones
+   - Instala dependencias manualmente
+
+3. **Errores de Clonación**:
+   - Verifica tu conexión a internet
+   - Comprueba la accesibilidad del repositorio
+
+4. **Errores de Ejecución**:
+   - Verifica que la herramienta está en el PATH
+   - Comprueba los permisos de ejecución
+   - Revisa los logs de error
+
+## Notas Importantes
+
+- El script respeta las instalaciones existentes de Kali Linux
+- Las herramientas se organizan automáticamente en el menú de aplicaciones
+- Para ver los cambios en el menú, cierra sesión y vuelve a iniciar o ejecuta:
+  ```bash
+  sudo update-desktop-database
+  sudo update-menus
+  ```
+
+## Contribuir
+
+Las contribuciones son bienvenidas. Por favor, abre un issue primero para discutir los cambios que te gustaría hacer.
+
+## Licencia
+
+Este proyecto está licenciado bajo la Licencia MIT - ver el archivo [LICENSE](LICENSE) para más detalles.
 
 
 

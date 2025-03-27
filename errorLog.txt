@@ -1,0 +1,998 @@
+[sudo] password for kali: 
+Detectado Kali Linux. Actualizando sistema...
+Get:2 https://repo.protonvpn.com/debian stable InRelease [2,967 B]                 
+Err:2 https://repo.protonvpn.com/debian stable InRelease
+  Sub-process /usr/bin/sqv returned an error code (1), error message is: Missing key 84B0D3492C76C9C6F5873C18EDA3E22630349F1C, which is needed to verify signature.
+Get:1 http://mirror.math.princeton.edu/pub/kali kali-rolling InRelease [41.5 kB]
+Get:3 http://mirror.math.princeton.edu/pub/kali kali-rolling/main amd64 Packages [20.7 MB]
+Get:4 http://mirror.math.princeton.edu/pub/kali kali-rolling/main amd64 Contents (deb) [49.4 MB]
+Get:5 http://mirror.math.princeton.edu/pub/kali kali-rolling/contrib amd64 Packages [115 kB]
+Get:6 http://mirror.math.princeton.edu/pub/kali kali-rolling/contrib amd64 Contents (deb) [268 kB]
+Get:7 http://mirror.math.princeton.edu/pub/kali kali-rolling/non-free amd64 Packages [195 kB]
+Get:8 http://mirror.math.princeton.edu/pub/kali kali-rolling/non-free amd64 Contents (deb) [880 kB]
+Get:9 http://mirror.math.princeton.edu/pub/kali kali-rolling/non-free-firmware amd64 Packages [10.6 kB]
+Get:10 http://mirror.math.princeton.edu/pub/kali kali-rolling/non-free-firmware amd64 Contents (deb) [24.3 kB]
+Fetched 71.7 MB in 12s (6,050 kB/s)                                                                                                                                 
+505 packages can be upgraded. Run 'apt list --upgradable' to see them.
+Warning: An error occurred during the signature verification. The repository is not updated and the previous index files will be used. GPG error: https://repo.protonvpn.com/debian stable InRelease: Sub-process /usr/bin/sqv returned an error code (1), error message is: Missing key 84B0D3492C76C9C6F5873C18EDA3E22630349F1C, which is needed to verify signature.
+Warning: Failed to fetch https://repo.protonvpn.com/debian/dists/stable/InRelease  Sub-process /usr/bin/sqv returned an error code (1), error message is: Missing key 84B0D3492C76C9C6F5873C18EDA3E22630349F1C, which is needed to verify signature.
+Warning: Some index files failed to download. They have been ignored, or old ones used instead.
+python3-pip is already the newest version (25.0+dfsg-1).
+python3-pip set to manually installed.
+python3-venv is already the newest version (3.13.1-2).
+python3-venv set to manually installed.
+pipx is already the newest version (1.7.1-1).
+pipx set to manually installed.
+git is already the newest version (1:2.47.2-0.1).
+git set to manually installed.
+The following packages were automatically installed and are no longer required:
+  ca-certificates-mono    libglvnd-dev                         libmono-system-enterpriseservices4.0-cil                     libwebrtc-audio-processing1
+  cli-common              libgtksourceview-3.0-1               libmono-system-numerics4.0-cil                               libx265-209
+  firebird3.0-common      libgtksourceview-3.0-common          libmono-system-runtime-serialization-formatters-soap4.0-cil  mono-4.0-gac
+  firebird3.0-common-doc  libgtksourceviewmm-3.0-0v5           libmono-system-security4.0-cil                               mono-gac
+  libbfio1                libgumbo2                            libmono-system-transactions4.0-cil                           mono-runtime
+  libc++1-19              libjxl0.9                            libmono-system-windows-forms4.0-cil                          mono-runtime-common
+  libc++abi1-19           libmbedcrypto7t64                    libmono-system-xml4.0-cil                                    mono-runtime-sgen
+  libcapstone4            libmono-accessibility4.0-cil         libmono-system4.0-cil                                        openjdk-23-jre
+  libconfig++9v5          libmono-btls-interface4.0-cil        libmono-webbrowser4.0-cil                                    openjdk-23-jre-headless
+  libconfig9              libmono-corlib4.5-cil                libmsgraph-0-1                                               python3-appdirs
+  libdirectfb-1.7-7t64    libmono-corlib4.5-dll                libpaper1                                                    python3-ntlm-auth
+  libegl-dev              libmono-i18n-west4.0-cil             libpython3.12-dev                                            python3.12
+  libflac12t64            libmono-i18n4.0-cil                  libqt5sensors5                                               python3.12-dev
+  libfmt9                 libmono-posix4.0-cil                 libqt5webkit5                                                python3.12-minimal
+  libgdiplus              libmono-security4.0-cil              libsuperlu6                                                  python3.12-venv
+  libgl1-mesa-dev         libmono-system-configuration4.0-cil  libtag1v5                                                    ruby3.1
+  libgles-dev             libmono-system-core4.0-cil           libtag1v5-vanilla                                            ruby3.1-dev
+  libgles1                libmono-system-data4.0-cil           libtagc0                                                     ruby3.1-doc
+  libglvnd-core-dev       libmono-system-drawing4.0-cil        libunwind-19
+Use 'sudo apt autoremove' to remove them.
+
+Summary:
+  Upgrading: 0, Installing: 0, Removing: 0, Not Upgrading: 505
+Procesando Inspector...
+Instalando Inspector...
+Collecting argparse (from -r requirements.txt (line 1))
+  Downloading argparse-1.4.0-py2.py3-none-any.whl.metadata (2.8 kB)
+Collecting phonenumbers (from -r requirements.txt (line 2))
+  Downloading phonenumbers-9.0.1-py2.py3-none-any.whl.metadata (11 kB)
+Collecting tqdm (from -r requirements.txt (line 3))
+  Using cached tqdm-4.67.1-py3-none-any.whl.metadata (57 kB)
+Collecting bs4 (from -r requirements.txt (line 4))
+  Using cached bs4-0.0.2-py2.py3-none-any.whl.metadata (411 bytes)
+Collecting requests (from -r requirements.txt (line 5))
+  Using cached requests-2.32.3-py3-none-any.whl.metadata (4.6 kB)
+Collecting trio (from -r requirements.txt (line 6))
+  Using cached trio-0.29.0-py3-none-any.whl.metadata (8.5 kB)
+Collecting httpx (from -r requirements.txt (line 7))
+  Using cached httpx-0.28.1-py3-none-any.whl.metadata (7.1 kB)
+Collecting ignorant (from -r requirements.txt (line 8))
+  Downloading ignorant-1.2-py3-none-any.whl.metadata (538 bytes)
+Collecting colorama (from -r requirements.txt (line 9))
+  Using cached colorama-0.4.6-py2.py3-none-any.whl.metadata (17 kB)
+Collecting beautifulsoup4 (from bs4->-r requirements.txt (line 4))
+  Using cached beautifulsoup4-4.13.3-py3-none-any.whl.metadata (3.8 kB)
+Collecting charset-normalizer<4,>=2 (from requests->-r requirements.txt (line 5))
+  Using cached charset_normalizer-3.4.1-cp313-cp313-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (35 kB)
+Collecting idna<4,>=2.5 (from requests->-r requirements.txt (line 5))
+  Using cached idna-3.10-py3-none-any.whl.metadata (10 kB)
+Collecting urllib3<3,>=1.21.1 (from requests->-r requirements.txt (line 5))
+  Using cached urllib3-2.3.0-py3-none-any.whl.metadata (6.5 kB)
+Collecting certifi>=2017.4.17 (from requests->-r requirements.txt (line 5))
+  Using cached certifi-2025.1.31-py3-none-any.whl.metadata (2.5 kB)
+Collecting attrs>=23.2.0 (from trio->-r requirements.txt (line 6))
+  Downloading attrs-25.3.0-py3-none-any.whl.metadata (10 kB)
+Collecting sortedcontainers (from trio->-r requirements.txt (line 6))
+  Using cached sortedcontainers-2.4.0-py2.py3-none-any.whl.metadata (10 kB)
+Collecting outcome (from trio->-r requirements.txt (line 6))
+  Using cached outcome-1.3.0.post0-py2.py3-none-any.whl.metadata (2.6 kB)
+Collecting sniffio>=1.3.0 (from trio->-r requirements.txt (line 6))
+  Using cached sniffio-1.3.1-py3-none-any.whl.metadata (3.9 kB)
+Collecting anyio (from httpx->-r requirements.txt (line 7))
+  Downloading anyio-4.9.0-py3-none-any.whl.metadata (4.7 kB)
+Collecting httpcore==1.* (from httpx->-r requirements.txt (line 7))
+  Using cached httpcore-1.0.7-py3-none-any.whl.metadata (21 kB)
+Collecting h11<0.15,>=0.13 (from httpcore==1.*->httpx->-r requirements.txt (line 7))
+  Using cached h11-0.14.0-py3-none-any.whl.metadata (8.2 kB)
+Collecting termcolor (from ignorant->-r requirements.txt (line 8))
+  Using cached termcolor-2.5.0-py3-none-any.whl.metadata (6.1 kB)
+Collecting soupsieve>1.2 (from beautifulsoup4->bs4->-r requirements.txt (line 4))
+  Using cached soupsieve-2.6-py3-none-any.whl.metadata (4.6 kB)
+Collecting typing-extensions>=4.0.0 (from beautifulsoup4->bs4->-r requirements.txt (line 4))
+  Using cached typing_extensions-4.12.2-py3-none-any.whl.metadata (3.0 kB)
+Downloading argparse-1.4.0-py2.py3-none-any.whl (23 kB)
+Downloading phonenumbers-9.0.1-py2.py3-none-any.whl (2.6 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.6/2.6 MB 31.6 MB/s eta 0:00:00
+Using cached tqdm-4.67.1-py3-none-any.whl (78 kB)
+Using cached bs4-0.0.2-py2.py3-none-any.whl (1.2 kB)
+Using cached requests-2.32.3-py3-none-any.whl (64 kB)
+Using cached trio-0.29.0-py3-none-any.whl (492 kB)
+Using cached httpx-0.28.1-py3-none-any.whl (73 kB)
+Using cached httpcore-1.0.7-py3-none-any.whl (78 kB)
+Downloading ignorant-1.2-py3-none-any.whl (26 kB)
+Using cached colorama-0.4.6-py2.py3-none-any.whl (25 kB)
+Downloading attrs-25.3.0-py3-none-any.whl (63 kB)
+Using cached certifi-2025.1.31-py3-none-any.whl (166 kB)
+Using cached charset_normalizer-3.4.1-cp313-cp313-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (144 kB)
+Using cached idna-3.10-py3-none-any.whl (70 kB)
+Using cached sniffio-1.3.1-py3-none-any.whl (10 kB)
+Using cached urllib3-2.3.0-py3-none-any.whl (128 kB)
+Downloading anyio-4.9.0-py3-none-any.whl (100 kB)
+Using cached beautifulsoup4-4.13.3-py3-none-any.whl (186 kB)
+Using cached outcome-1.3.0.post0-py2.py3-none-any.whl (10 kB)
+Using cached sortedcontainers-2.4.0-py2.py3-none-any.whl (29 kB)
+Using cached termcolor-2.5.0-py3-none-any.whl (7.8 kB)
+Using cached h11-0.14.0-py3-none-any.whl (58 kB)
+Using cached soupsieve-2.6-py3-none-any.whl (36 kB)
+Using cached typing_extensions-4.12.2-py3-none-any.whl (37 kB)
+Installing collected packages: sortedcontainers, phonenumbers, argparse, urllib3, typing-extensions, tqdm, termcolor, soupsieve, sniffio, idna, h11, colorama, charset-normalizer, certifi, attrs, requests, outcome, httpcore, beautifulsoup4, anyio, trio, httpx, bs4, ignorant
+Successfully installed anyio-4.9.0 argparse-1.4.0 attrs-25.3.0 beautifulsoup4-4.13.3 bs4-0.0.2 certifi-2025.1.31 charset-normalizer-3.4.1 colorama-0.4.6 h11-0.14.0 httpcore-1.0.7 httpx-0.28.1 idna-3.10 ignorant-1.2 outcome-1.3.0.post0 phonenumbers-9.0.1 requests-2.32.3 sniffio-1.3.1 sortedcontainers-2.4.0 soupsieve-2.6 termcolor-2.5.0 tqdm-4.67.1 trio-0.29.0 typing-extensions-4.12.2 urllib3-2.3.0
+Probando instalación de Inspector...
+Procesando AliensEye...
+Instalando AliensEye...
+Procesando EmailHarvester...
+Instalando EmailHarvester...
+Collecting termcolor (from -r requirements.txt (line 1))
+  Using cached termcolor-2.5.0-py3-none-any.whl.metadata (6.1 kB)
+Collecting colorama (from -r requirements.txt (line 2))
+  Using cached colorama-0.4.6-py2.py3-none-any.whl.metadata (17 kB)
+Collecting requests (from -r requirements.txt (line 3))
+  Using cached requests-2.32.3-py3-none-any.whl.metadata (4.6 kB)
+Collecting validators (from -r requirements.txt (line 4))
+  Downloading validators-0.34.0-py3-none-any.whl.metadata (3.8 kB)
+Collecting charset-normalizer<4,>=2 (from requests->-r requirements.txt (line 3))
+  Using cached charset_normalizer-3.4.1-cp313-cp313-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (35 kB)
+Collecting idna<4,>=2.5 (from requests->-r requirements.txt (line 3))
+  Using cached idna-3.10-py3-none-any.whl.metadata (10 kB)
+Collecting urllib3<3,>=1.21.1 (from requests->-r requirements.txt (line 3))
+  Using cached urllib3-2.3.0-py3-none-any.whl.metadata (6.5 kB)
+Collecting certifi>=2017.4.17 (from requests->-r requirements.txt (line 3))
+  Using cached certifi-2025.1.31-py3-none-any.whl.metadata (2.5 kB)
+Using cached termcolor-2.5.0-py3-none-any.whl (7.8 kB)
+Using cached colorama-0.4.6-py2.py3-none-any.whl (25 kB)
+Using cached requests-2.32.3-py3-none-any.whl (64 kB)
+Downloading validators-0.34.0-py3-none-any.whl (43 kB)
+Using cached certifi-2025.1.31-py3-none-any.whl (166 kB)
+Using cached charset_normalizer-3.4.1-cp313-cp313-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (144 kB)
+Using cached idna-3.10-py3-none-any.whl (70 kB)
+Using cached urllib3-2.3.0-py3-none-any.whl (128 kB)
+Installing collected packages: validators, urllib3, termcolor, idna, colorama, charset-normalizer, certifi, requests
+Successfully installed certifi-2025.1.31 charset-normalizer-3.4.1 colorama-0.4.6 idna-3.10 requests-2.32.3 termcolor-2.5.0 urllib3-2.3.0 validators-0.34.0
+Probando instalación de EmailHarvester...
+Procesando Photon...
+Instalando Photon...
+Collecting requests (from -r requirements.txt (line 1))
+  Using cached requests-2.32.3-py3-none-any.whl.metadata (4.6 kB)
+Collecting urllib3 (from -r requirements.txt (line 3))
+  Using cached urllib3-2.3.0-py3-none-any.whl.metadata (6.5 kB)
+Collecting tld (from -r requirements.txt (line 4))
+  Downloading tld-0.13-py2.py3-none-any.whl.metadata (9.4 kB)
+Collecting charset-normalizer<4,>=2 (from requests->-r requirements.txt (line 1))
+  Using cached charset_normalizer-3.4.1-cp313-cp313-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (35 kB)
+Collecting idna<4,>=2.5 (from requests->-r requirements.txt (line 1))
+  Using cached idna-3.10-py3-none-any.whl.metadata (10 kB)
+Collecting certifi>=2017.4.17 (from requests->-r requirements.txt (line 1))
+  Using cached certifi-2025.1.31-py3-none-any.whl.metadata (2.5 kB)
+Collecting PySocks!=1.5.7,>=1.5.6 (from requests[socks]->-r requirements.txt (line 2))
+  Using cached PySocks-1.7.1-py3-none-any.whl.metadata (13 kB)
+Using cached requests-2.32.3-py3-none-any.whl (64 kB)
+Using cached urllib3-2.3.0-py3-none-any.whl (128 kB)
+Downloading tld-0.13-py2.py3-none-any.whl (263 kB)
+Using cached certifi-2025.1.31-py3-none-any.whl (166 kB)
+Using cached charset_normalizer-3.4.1-cp313-cp313-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (144 kB)
+Using cached idna-3.10-py3-none-any.whl (70 kB)
+Using cached PySocks-1.7.1-py3-none-any.whl (16 kB)
+Installing collected packages: urllib3, tld, PySocks, idna, charset-normalizer, certifi, requests
+Successfully installed PySocks-1.7.1 certifi-2025.1.31 charset-normalizer-3.4.1 idna-3.10 requests-2.32.3 tld-0.13 urllib3-2.3.0
+Probando instalación de Photon...
+Procesando Profil3r...
+Instalando Profil3r...
+ERROR: Could not open requirements file: [Errno 2] No such file or directory: 'requirements.txt'
+Procesando Spiderfoot...                                                                                                                                             
+Spiderfoot está instalado y funcionando correctamente.
+Procesando Sherlock...
+Instalando Sherlock...
+Probando instalación de Sherlock...
+Procesando Osintgram...
+Instalando Osintgram...
+Ignoring pyreadline: markers 'platform_system == "Windows"' don't match your environment
+Collecting requests==2.24.0 (from -r requirements.txt (line 1))
+  Downloading requests-2.24.0-py2.py3-none-any.whl.metadata (6.9 kB)
+Collecting requests-toolbelt==0.9.1 (from -r requirements.txt (line 2))
+  Downloading requests_toolbelt-0.9.1-py2.py3-none-any.whl.metadata (13 kB)
+Collecting geopy>=2.0.0 (from -r requirements.txt (line 3))
+  Downloading geopy-2.4.1-py3-none-any.whl.metadata (6.8 kB)
+Collecting prettytable==0.7.2 (from -r requirements.txt (line 4))
+  Downloading prettytable-0.7.2.zip (28 kB)
+  Installing build dependencies ... done
+  Getting requirements to build wheel ... done
+  Preparing metadata (pyproject.toml) ... done
+Collecting instagram-private-api==1.6.0 (from -r requirements.txt (line 5))
+  Downloading instagram_private_api-1.6.0.0-py3-none-any.whl.metadata (8.6 kB)
+Collecting gnureadline>=8.0.0 (from -r requirements.txt (line 6))
+  Downloading gnureadline-8.2.13-cp313-cp313-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (12 kB)
+Collecting chardet<4,>=3.0.2 (from requests==2.24.0->-r requirements.txt (line 1))
+  Downloading chardet-3.0.4-py2.py3-none-any.whl.metadata (3.2 kB)
+Collecting idna<3,>=2.5 (from requests==2.24.0->-r requirements.txt (line 1))
+  Downloading idna-2.10-py2.py3-none-any.whl.metadata (9.1 kB)
+Collecting urllib3!=1.25.0,!=1.25.1,<1.26,>=1.21.1 (from requests==2.24.0->-r requirements.txt (line 1))
+  Downloading urllib3-1.25.11-py2.py3-none-any.whl.metadata (41 kB)
+Collecting certifi>=2017.4.17 (from requests==2.24.0->-r requirements.txt (line 1))
+  Using cached certifi-2025.1.31-py3-none-any.whl.metadata (2.5 kB)
+Collecting geographiclib<3,>=1.52 (from geopy>=2.0.0->-r requirements.txt (line 3))
+  Downloading geographiclib-2.0-py3-none-any.whl.metadata (1.4 kB)
+Downloading requests-2.24.0-py2.py3-none-any.whl (61 kB)
+Downloading requests_toolbelt-0.9.1-py2.py3-none-any.whl (54 kB)
+Downloading instagram_private_api-1.6.0.0-py3-none-any.whl (78 kB)
+Downloading geopy-2.4.1-py3-none-any.whl (125 kB)
+Downloading gnureadline-8.2.13-cp313-cp313-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (654 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 654.6/654.6 kB 29.4 MB/s eta 0:00:00
+Using cached certifi-2025.1.31-py3-none-any.whl (166 kB)
+Downloading chardet-3.0.4-py2.py3-none-any.whl (133 kB)
+Downloading geographiclib-2.0-py3-none-any.whl (40 kB)
+Downloading idna-2.10-py2.py3-none-any.whl (58 kB)
+Downloading urllib3-1.25.11-py2.py3-none-any.whl (127 kB)
+Building wheels for collected packages: prettytable
+  Building wheel for prettytable (pyproject.toml) ... done
+  Created wheel for prettytable: filename=prettytable-0.7.2-py3-none-any.whl size=13763 sha256=54d1a79fceccee952dba38c78a5cbdd35601f65c8b527c5e2f1e08933fec6953
+  Stored in directory: /root/.cache/pip/wheels/ab/33/17/596fcc3828e23dd3e54118df5699ff0341a149cd621bd3e5da
+Successfully built prettytable
+Installing collected packages: prettytable, instagram-private-api, gnureadline, chardet, urllib3, idna, geographiclib, certifi, requests, geopy, requests-toolbelt
+Successfully installed certifi-2025.1.31 chardet-3.0.4 geographiclib-2.0 geopy-2.4.1 gnureadline-8.2.13 idna-2.10 instagram-private-api-1.6.0.0 prettytable-0.7.2 requests-2.24.0 requests-toolbelt-0.9.1 urllib3-1.25.11
+Probando instalación de Osintgram...
+Procesando Masto...
+Instalando Masto...
+Collecting bs4 (from -r requirements.txt (line 1))
+  Using cached bs4-0.0.2-py2.py3-none-any.whl.metadata (411 bytes)
+Collecting tqdm (from -r requirements.txt (line 2))
+  Using cached tqdm-4.67.1-py3-none-any.whl.metadata (57 kB)
+Collecting urllib3 (from -r requirements.txt (line 3))
+  Using cached urllib3-2.3.0-py3-none-any.whl.metadata (6.5 kB)
+Collecting argparse (from -r requirements.txt (line 4))
+  Using cached argparse-1.4.0-py2.py3-none-any.whl.metadata (2.8 kB)
+Collecting w3lib (from -r requirements.txt (line 5))
+  Downloading w3lib-2.3.1-py3-none-any.whl.metadata (2.3 kB)
+Collecting aiohttp (from -r requirements.txt (line 6))
+  Downloading aiohttp-3.11.14-cp313-cp313-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (7.7 kB)
+Collecting asyncio (from -r requirements.txt (line 7))
+  Downloading asyncio-3.4.3-py3-none-any.whl.metadata (1.7 kB)
+Collecting requests (from -r requirements.txt (line 8))
+  Using cached requests-2.32.3-py3-none-any.whl.metadata (4.6 kB)
+Collecting beautifulsoup4 (from bs4->-r requirements.txt (line 1))
+  Using cached beautifulsoup4-4.13.3-py3-none-any.whl.metadata (3.8 kB)
+Collecting aiohappyeyeballs>=2.3.0 (from aiohttp->-r requirements.txt (line 6))
+  Downloading aiohappyeyeballs-2.6.1-py3-none-any.whl.metadata (5.9 kB)
+Collecting aiosignal>=1.1.2 (from aiohttp->-r requirements.txt (line 6))
+  Using cached aiosignal-1.3.2-py2.py3-none-any.whl.metadata (3.8 kB)
+Collecting attrs>=17.3.0 (from aiohttp->-r requirements.txt (line 6))
+  Using cached attrs-25.3.0-py3-none-any.whl.metadata (10 kB)
+Collecting frozenlist>=1.1.1 (from aiohttp->-r requirements.txt (line 6))
+  Using cached frozenlist-1.5.0-cp313-cp313-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (13 kB)
+Collecting multidict<7.0,>=4.5 (from aiohttp->-r requirements.txt (line 6))
+  Downloading multidict-6.2.0-cp313-cp313-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (4.9 kB)
+Collecting propcache>=0.2.0 (from aiohttp->-r requirements.txt (line 6))
+  Using cached propcache-0.3.0-cp313-cp313-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (10 kB)
+Collecting yarl<2.0,>=1.17.0 (from aiohttp->-r requirements.txt (line 6))
+  Using cached yarl-1.18.3-cp313-cp313-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (69 kB)
+Collecting charset-normalizer<4,>=2 (from requests->-r requirements.txt (line 8))
+  Using cached charset_normalizer-3.4.1-cp313-cp313-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (35 kB)
+Collecting idna<4,>=2.5 (from requests->-r requirements.txt (line 8))
+  Using cached idna-3.10-py3-none-any.whl.metadata (10 kB)
+Collecting certifi>=2017.4.17 (from requests->-r requirements.txt (line 8))
+  Using cached certifi-2025.1.31-py3-none-any.whl.metadata (2.5 kB)
+Collecting soupsieve>1.2 (from beautifulsoup4->bs4->-r requirements.txt (line 1))
+  Using cached soupsieve-2.6-py3-none-any.whl.metadata (4.6 kB)
+Collecting typing-extensions>=4.0.0 (from beautifulsoup4->bs4->-r requirements.txt (line 1))
+  Using cached typing_extensions-4.12.2-py3-none-any.whl.metadata (3.0 kB)
+Using cached bs4-0.0.2-py2.py3-none-any.whl (1.2 kB)
+Using cached tqdm-4.67.1-py3-none-any.whl (78 kB)
+Using cached urllib3-2.3.0-py3-none-any.whl (128 kB)
+Using cached argparse-1.4.0-py2.py3-none-any.whl (23 kB)
+Downloading w3lib-2.3.1-py3-none-any.whl (21 kB)
+Downloading aiohttp-3.11.14-cp313-cp313-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (1.7 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.7/1.7 MB 34.2 MB/s eta 0:00:00
+Downloading asyncio-3.4.3-py3-none-any.whl (101 kB)
+Using cached requests-2.32.3-py3-none-any.whl (64 kB)
+Downloading aiohappyeyeballs-2.6.1-py3-none-any.whl (15 kB)
+Using cached aiosignal-1.3.2-py2.py3-none-any.whl (7.6 kB)
+Using cached attrs-25.3.0-py3-none-any.whl (63 kB)
+Using cached certifi-2025.1.31-py3-none-any.whl (166 kB)
+Using cached charset_normalizer-3.4.1-cp313-cp313-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (144 kB)
+Using cached frozenlist-1.5.0-cp313-cp313-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (267 kB)
+Using cached idna-3.10-py3-none-any.whl (70 kB)
+Downloading multidict-6.2.0-cp313-cp313-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (131 kB)
+Using cached propcache-0.3.0-cp313-cp313-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (227 kB)
+Using cached yarl-1.18.3-cp313-cp313-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (339 kB)
+Using cached beautifulsoup4-4.13.3-py3-none-any.whl (186 kB)
+Using cached soupsieve-2.6-py3-none-any.whl (36 kB)
+Using cached typing_extensions-4.12.2-py3-none-any.whl (37 kB)
+Installing collected packages: asyncio, argparse, w3lib, urllib3, typing-extensions, tqdm, soupsieve, propcache, multidict, idna, frozenlist, charset-normalizer, certifi, attrs, aiohappyeyeballs, yarl, requests, beautifulsoup4, aiosignal, bs4, aiohttp
+Successfully installed aiohappyeyeballs-2.6.1 aiohttp-3.11.14 aiosignal-1.3.2 argparse-1.4.0 asyncio-3.4.3 attrs-25.3.0 beautifulsoup4-4.13.3 bs4-0.0.2 certifi-2025.1.31 charset-normalizer-3.4.1 frozenlist-1.5.0 idna-3.10 multidict-6.2.0 propcache-0.3.0 requests-2.32.3 soupsieve-2.6 tqdm-4.67.1 typing-extensions-4.12.2 urllib3-2.3.0 w3lib-2.3.1 yarl-1.18.3
+Probando instalación de Masto...
+Procesando H8mail...
+Instalando H8mail...
+Collecting h8mail
+  Downloading h8mail-2.5.6-py3-none-any.whl.metadata (2.2 kB)
+Collecting requests (from h8mail)
+  Using cached requests-2.32.3-py3-none-any.whl.metadata (4.6 kB)
+Collecting charset-normalizer<4,>=2 (from requests->h8mail)
+  Using cached charset_normalizer-3.4.1-cp313-cp313-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (35 kB)
+Collecting idna<4,>=2.5 (from requests->h8mail)
+  Using cached idna-3.10-py3-none-any.whl.metadata (10 kB)
+Collecting urllib3<3,>=1.21.1 (from requests->h8mail)
+  Using cached urllib3-2.3.0-py3-none-any.whl.metadata (6.5 kB)
+Collecting certifi>=2017.4.17 (from requests->h8mail)
+  Using cached certifi-2025.1.31-py3-none-any.whl.metadata (2.5 kB)
+Downloading h8mail-2.5.6-py3-none-any.whl (34 kB)
+Using cached requests-2.32.3-py3-none-any.whl (64 kB)
+Using cached certifi-2025.1.31-py3-none-any.whl (166 kB)
+Using cached charset_normalizer-3.4.1-cp313-cp313-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (144 kB)
+Using cached idna-3.10-py3-none-any.whl (70 kB)
+Using cached urllib3-2.3.0-py3-none-any.whl (128 kB)
+Installing collected packages: urllib3, idna, charset-normalizer, certifi, requests, h8mail
+Successfully installed certifi-2025.1.31 charset-normalizer-3.4.1 h8mail-2.5.6 idna-3.10 requests-2.32.3 urllib3-2.3.0
+Probando instalación de H8mail...
+Procesando PhoneInfoga...
+Instalando PhoneInfoga...
+Probando instalación de PhoneInfoga...
+Procesando UserFinder...
+Instalando UserFinder...
+Probando instalación de UserFinder...
+Procesando DNSRecon...
+DNSRecon está instalado y funcionando correctamente.
+Procesando Phunter...
+Instalando Phunter...
+Collecting asyncio (from -r requirements.txt (line 1))
+  Using cached asyncio-3.4.3-py3-none-any.whl.metadata (1.7 kB)
+Collecting httpx (from -r requirements.txt (line 2))
+  Using cached httpx-0.28.1-py3-none-any.whl.metadata (7.1 kB)
+Collecting bs4 (from -r requirements.txt (line 3))
+  Using cached bs4-0.0.2-py2.py3-none-any.whl.metadata (411 bytes)
+Collecting argparse (from -r requirements.txt (line 4))
+  Using cached argparse-1.4.0-py2.py3-none-any.whl.metadata (2.8 kB)
+Collecting selenium (from -r requirements.txt (line 5))
+  Downloading selenium-4.30.0-py3-none-any.whl.metadata (7.5 kB)
+Collecting webdriver_manager (from -r requirements.txt (line 6))
+  Downloading webdriver_manager-4.0.2-py2.py3-none-any.whl.metadata (12 kB)
+Collecting phonenumbers (from -r requirements.txt (line 7))
+  Using cached phonenumbers-9.0.1-py2.py3-none-any.whl.metadata (11 kB)
+Collecting anyio (from httpx->-r requirements.txt (line 2))
+  Using cached anyio-4.9.0-py3-none-any.whl.metadata (4.7 kB)
+Collecting certifi (from httpx->-r requirements.txt (line 2))
+  Using cached certifi-2025.1.31-py3-none-any.whl.metadata (2.5 kB)
+Collecting httpcore==1.* (from httpx->-r requirements.txt (line 2))
+  Using cached httpcore-1.0.7-py3-none-any.whl.metadata (21 kB)
+Collecting idna (from httpx->-r requirements.txt (line 2))
+  Using cached idna-3.10-py3-none-any.whl.metadata (10 kB)
+Collecting h11<0.15,>=0.13 (from httpcore==1.*->httpx->-r requirements.txt (line 2))
+  Using cached h11-0.14.0-py3-none-any.whl.metadata (8.2 kB)
+Collecting beautifulsoup4 (from bs4->-r requirements.txt (line 3))
+  Using cached beautifulsoup4-4.13.3-py3-none-any.whl.metadata (3.8 kB)
+Collecting urllib3<3,>=1.26 (from urllib3[socks]<3,>=1.26->selenium->-r requirements.txt (line 5))
+  Using cached urllib3-2.3.0-py3-none-any.whl.metadata (6.5 kB)
+Collecting trio~=0.17 (from selenium->-r requirements.txt (line 5))
+  Using cached trio-0.29.0-py3-none-any.whl.metadata (8.5 kB)
+Collecting trio-websocket~=0.9 (from selenium->-r requirements.txt (line 5))
+  Downloading trio_websocket-0.12.2-py3-none-any.whl.metadata (5.1 kB)
+Collecting typing_extensions~=4.9 (from selenium->-r requirements.txt (line 5))
+  Using cached typing_extensions-4.12.2-py3-none-any.whl.metadata (3.0 kB)
+Collecting websocket-client~=1.8 (from selenium->-r requirements.txt (line 5))
+  Downloading websocket_client-1.8.0-py3-none-any.whl.metadata (8.0 kB)
+Collecting requests (from webdriver_manager->-r requirements.txt (line 6))
+  Using cached requests-2.32.3-py3-none-any.whl.metadata (4.6 kB)
+Collecting python-dotenv (from webdriver_manager->-r requirements.txt (line 6))
+  Downloading python_dotenv-1.0.1-py3-none-any.whl.metadata (23 kB)
+Collecting packaging (from webdriver_manager->-r requirements.txt (line 6))
+  Downloading packaging-24.2-py3-none-any.whl.metadata (3.2 kB)
+Collecting attrs>=23.2.0 (from trio~=0.17->selenium->-r requirements.txt (line 5))
+  Using cached attrs-25.3.0-py3-none-any.whl.metadata (10 kB)
+Collecting sortedcontainers (from trio~=0.17->selenium->-r requirements.txt (line 5))
+  Using cached sortedcontainers-2.4.0-py2.py3-none-any.whl.metadata (10 kB)
+Collecting outcome (from trio~=0.17->selenium->-r requirements.txt (line 5))
+  Using cached outcome-1.3.0.post0-py2.py3-none-any.whl.metadata (2.6 kB)
+Collecting sniffio>=1.3.0 (from trio~=0.17->selenium->-r requirements.txt (line 5))
+  Using cached sniffio-1.3.1-py3-none-any.whl.metadata (3.9 kB)
+Collecting wsproto>=0.14 (from trio-websocket~=0.9->selenium->-r requirements.txt (line 5))
+  Downloading wsproto-1.2.0-py3-none-any.whl.metadata (5.6 kB)
+Collecting pysocks!=1.5.7,<2.0,>=1.5.6 (from urllib3[socks]<3,>=1.26->selenium->-r requirements.txt (line 5))
+  Using cached PySocks-1.7.1-py3-none-any.whl.metadata (13 kB)
+Collecting soupsieve>1.2 (from beautifulsoup4->bs4->-r requirements.txt (line 3))
+  Using cached soupsieve-2.6-py3-none-any.whl.metadata (4.6 kB)
+Collecting charset-normalizer<4,>=2 (from requests->webdriver_manager->-r requirements.txt (line 6))
+  Using cached charset_normalizer-3.4.1-cp313-cp313-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (35 kB)
+Using cached asyncio-3.4.3-py3-none-any.whl (101 kB)
+Using cached httpx-0.28.1-py3-none-any.whl (73 kB)
+Using cached httpcore-1.0.7-py3-none-any.whl (78 kB)
+Using cached bs4-0.0.2-py2.py3-none-any.whl (1.2 kB)
+Using cached argparse-1.4.0-py2.py3-none-any.whl (23 kB)
+Downloading selenium-4.30.0-py3-none-any.whl (9.4 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 9.4/9.4 MB 18.9 MB/s eta 0:00:00
+Downloading webdriver_manager-4.0.2-py2.py3-none-any.whl (27 kB)
+Using cached phonenumbers-9.0.1-py2.py3-none-any.whl (2.6 MB)
+Using cached certifi-2025.1.31-py3-none-any.whl (166 kB)
+Using cached trio-0.29.0-py3-none-any.whl (492 kB)
+Downloading trio_websocket-0.12.2-py3-none-any.whl (21 kB)
+Using cached typing_extensions-4.12.2-py3-none-any.whl (37 kB)
+Using cached urllib3-2.3.0-py3-none-any.whl (128 kB)
+Downloading websocket_client-1.8.0-py3-none-any.whl (58 kB)
+Using cached anyio-4.9.0-py3-none-any.whl (100 kB)
+Using cached idna-3.10-py3-none-any.whl (70 kB)
+Using cached beautifulsoup4-4.13.3-py3-none-any.whl (186 kB)
+Downloading packaging-24.2-py3-none-any.whl (65 kB)
+Downloading python_dotenv-1.0.1-py3-none-any.whl (19 kB)
+Using cached requests-2.32.3-py3-none-any.whl (64 kB)
+Using cached attrs-25.3.0-py3-none-any.whl (63 kB)
+Using cached charset_normalizer-3.4.1-cp313-cp313-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (144 kB)
+Using cached h11-0.14.0-py3-none-any.whl (58 kB)
+Using cached outcome-1.3.0.post0-py2.py3-none-any.whl (10 kB)
+Using cached PySocks-1.7.1-py3-none-any.whl (16 kB)
+Using cached sniffio-1.3.1-py3-none-any.whl (10 kB)
+Using cached soupsieve-2.6-py3-none-any.whl (36 kB)
+Downloading wsproto-1.2.0-py3-none-any.whl (24 kB)
+Using cached sortedcontainers-2.4.0-py2.py3-none-any.whl (29 kB)
+Installing collected packages: sortedcontainers, phonenumbers, asyncio, argparse, websocket-client, urllib3, typing_extensions, soupsieve, sniffio, python-dotenv, pysocks, packaging, idna, h11, charset-normalizer, certifi, attrs, wsproto, requests, outcome, httpcore, beautifulsoup4, anyio, webdriver_manager, trio, httpx, bs4, trio-websocket, selenium
+Successfully installed anyio-4.9.0 argparse-1.4.0 asyncio-3.4.3 attrs-25.3.0 beautifulsoup4-4.13.3 bs4-0.0.2 certifi-2025.1.31 charset-normalizer-3.4.1 h11-0.14.0 httpcore-1.0.7 httpx-0.28.1 idna-3.10 outcome-1.3.0.post0 packaging-24.2 phonenumbers-9.0.1 pysocks-1.7.1 python-dotenv-1.0.1 requests-2.32.3 selenium-4.30.0 sniffio-1.3.1 sortedcontainers-2.4.0 soupsieve-2.6 trio-0.29.0 trio-websocket-0.12.2 typing_extensions-4.12.2 urllib3-2.3.0 webdriver_manager-4.0.2 websocket-client-1.8.0 wsproto-1.2.0
+Probando instalación de Phunter...
+Procesando Maigret...
+Maigret está instalado y funcionando correctamente.
+Procesando Zehef...
+Instalando Zehef...
+Collecting argparse (from -r requirements.txt (line 1))
+  Using cached argparse-1.4.0-py2.py3-none-any.whl.metadata (2.8 kB)
+Collecting httpx (from -r requirements.txt (line 2))
+  Using cached httpx-0.28.1-py3-none-any.whl.metadata (7.1 kB)
+Collecting requests (from -r requirements.txt (line 3))
+  Using cached requests-2.32.3-py3-none-any.whl.metadata (4.6 kB)
+Collecting bs4 (from -r requirements.txt (line 4))
+  Using cached bs4-0.0.2-py2.py3-none-any.whl.metadata (411 bytes)
+Collecting asyncio (from -r requirements.txt (line 5))
+  Using cached asyncio-3.4.3-py3-none-any.whl.metadata (1.7 kB)
+Collecting anyio (from httpx->-r requirements.txt (line 2))
+  Using cached anyio-4.9.0-py3-none-any.whl.metadata (4.7 kB)
+Collecting certifi (from httpx->-r requirements.txt (line 2))
+  Using cached certifi-2025.1.31-py3-none-any.whl.metadata (2.5 kB)
+Collecting httpcore==1.* (from httpx->-r requirements.txt (line 2))
+  Using cached httpcore-1.0.7-py3-none-any.whl.metadata (21 kB)
+Collecting idna (from httpx->-r requirements.txt (line 2))
+  Using cached idna-3.10-py3-none-any.whl.metadata (10 kB)
+Collecting h11<0.15,>=0.13 (from httpcore==1.*->httpx->-r requirements.txt (line 2))
+  Using cached h11-0.14.0-py3-none-any.whl.metadata (8.2 kB)
+Collecting charset-normalizer<4,>=2 (from requests->-r requirements.txt (line 3))
+  Using cached charset_normalizer-3.4.1-cp313-cp313-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (35 kB)
+Collecting urllib3<3,>=1.21.1 (from requests->-r requirements.txt (line 3))
+  Using cached urllib3-2.3.0-py3-none-any.whl.metadata (6.5 kB)
+Collecting beautifulsoup4 (from bs4->-r requirements.txt (line 4))
+  Using cached beautifulsoup4-4.13.3-py3-none-any.whl.metadata (3.8 kB)
+Collecting sniffio>=1.1 (from anyio->httpx->-r requirements.txt (line 2))
+  Using cached sniffio-1.3.1-py3-none-any.whl.metadata (3.9 kB)
+Collecting soupsieve>1.2 (from beautifulsoup4->bs4->-r requirements.txt (line 4))
+  Using cached soupsieve-2.6-py3-none-any.whl.metadata (4.6 kB)
+Collecting typing-extensions>=4.0.0 (from beautifulsoup4->bs4->-r requirements.txt (line 4))
+  Using cached typing_extensions-4.12.2-py3-none-any.whl.metadata (3.0 kB)
+Using cached argparse-1.4.0-py2.py3-none-any.whl (23 kB)
+Using cached httpx-0.28.1-py3-none-any.whl (73 kB)
+Using cached httpcore-1.0.7-py3-none-any.whl (78 kB)
+Using cached requests-2.32.3-py3-none-any.whl (64 kB)
+Using cached bs4-0.0.2-py2.py3-none-any.whl (1.2 kB)
+Using cached asyncio-3.4.3-py3-none-any.whl (101 kB)
+Using cached certifi-2025.1.31-py3-none-any.whl (166 kB)
+Using cached charset_normalizer-3.4.1-cp313-cp313-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (144 kB)
+Using cached idna-3.10-py3-none-any.whl (70 kB)
+Using cached urllib3-2.3.0-py3-none-any.whl (128 kB)
+Using cached anyio-4.9.0-py3-none-any.whl (100 kB)
+Using cached beautifulsoup4-4.13.3-py3-none-any.whl (186 kB)
+Using cached h11-0.14.0-py3-none-any.whl (58 kB)
+Using cached sniffio-1.3.1-py3-none-any.whl (10 kB)
+Using cached soupsieve-2.6-py3-none-any.whl (36 kB)
+Using cached typing_extensions-4.12.2-py3-none-any.whl (37 kB)
+Installing collected packages: asyncio, argparse, urllib3, typing-extensions, soupsieve, sniffio, idna, h11, charset-normalizer, certifi, requests, httpcore, beautifulsoup4, anyio, httpx, bs4
+Successfully installed anyio-4.9.0 argparse-1.4.0 asyncio-3.4.3 beautifulsoup4-4.13.3 bs4-0.0.2 certifi-2025.1.31 charset-normalizer-3.4.1 h11-0.14.0 httpcore-1.0.7 httpx-0.28.1 idna-3.10 requests-2.32.3 sniffio-1.3.1 soupsieve-2.6 typing-extensions-4.12.2 urllib3-2.3.0
+Probando instalación de Zehef...
+Procesando Eyes...
+Instalando Eyes...
+Collecting argparse (from -r requirements.txt (line 1))
+  Using cached argparse-1.4.0-py2.py3-none-any.whl.metadata (2.8 kB)
+Collecting httpx (from -r requirements.txt (line 2))
+  Using cached httpx-0.28.1-py3-none-any.whl.metadata (7.1 kB)
+Collecting datetime (from -r requirements.txt (line 3))
+  Downloading DateTime-5.5-py3-none-any.whl.metadata (33 kB)
+Collecting opencv-python (from -r requirements.txt (line 4))
+  Downloading opencv_python-4.11.0.86-cp37-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (20 kB)
+Collecting requests (from -r requirements.txt (line 5))
+  Using cached requests-2.32.3-py3-none-any.whl.metadata (4.6 kB)
+Collecting imagehash (from -r requirements.txt (line 6))
+  Downloading ImageHash-4.3.2-py2.py3-none-any.whl.metadata (8.4 kB)
+Collecting scrape-search-engine (from -r requirements.txt (line 7))
+  Downloading scrape_search_engine-0.2.2-py3-none-any.whl.metadata (4.2 kB)
+Collecting bs4 (from -r requirements.txt (line 8))
+  Using cached bs4-0.0.2-py2.py3-none-any.whl.metadata (411 bytes)
+Collecting anyio (from httpx->-r requirements.txt (line 2))
+  Using cached anyio-4.9.0-py3-none-any.whl.metadata (4.7 kB)
+Collecting certifi (from httpx->-r requirements.txt (line 2))
+  Using cached certifi-2025.1.31-py3-none-any.whl.metadata (2.5 kB)
+Collecting httpcore==1.* (from httpx->-r requirements.txt (line 2))
+  Using cached httpcore-1.0.7-py3-none-any.whl.metadata (21 kB)
+Collecting idna (from httpx->-r requirements.txt (line 2))
+  Using cached idna-3.10-py3-none-any.whl.metadata (10 kB)
+Collecting h11<0.15,>=0.13 (from httpcore==1.*->httpx->-r requirements.txt (line 2))
+  Using cached h11-0.14.0-py3-none-any.whl.metadata (8.2 kB)
+Collecting zope.interface (from datetime->-r requirements.txt (line 3))
+  Downloading zope.interface-7.2-cp313-cp313-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (44 kB)
+Collecting pytz (from datetime->-r requirements.txt (line 3))
+  Downloading pytz-2025.1-py2.py3-none-any.whl.metadata (22 kB)
+Collecting numpy>=1.21.2 (from opencv-python->-r requirements.txt (line 4))
+  Downloading numpy-2.2.4-cp313-cp313-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (62 kB)
+Collecting charset-normalizer<4,>=2 (from requests->-r requirements.txt (line 5))
+  Using cached charset_normalizer-3.4.1-cp313-cp313-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (35 kB)
+Collecting urllib3<3,>=1.21.1 (from requests->-r requirements.txt (line 5))
+  Using cached urllib3-2.3.0-py3-none-any.whl.metadata (6.5 kB)
+Collecting PyWavelets (from imagehash->-r requirements.txt (line 6))
+  Downloading pywavelets-1.8.0-cp313-cp313-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (9.0 kB)
+Collecting pillow (from imagehash->-r requirements.txt (line 6))
+  Using cached pillow-11.1.0-cp313-cp313-manylinux_2_28_x86_64.whl.metadata (9.1 kB)
+Collecting scipy (from imagehash->-r requirements.txt (line 6))
+  Downloading scipy-1.15.2-cp313-cp313-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (61 kB)
+Collecting beautifulsoup4 (from bs4->-r requirements.txt (line 8))
+  Using cached beautifulsoup4-4.13.3-py3-none-any.whl.metadata (3.8 kB)
+Collecting sniffio>=1.1 (from anyio->httpx->-r requirements.txt (line 2))
+  Using cached sniffio-1.3.1-py3-none-any.whl.metadata (3.9 kB)
+Collecting soupsieve>1.2 (from beautifulsoup4->bs4->-r requirements.txt (line 8))
+  Using cached soupsieve-2.6-py3-none-any.whl.metadata (4.6 kB)
+Collecting typing-extensions>=4.0.0 (from beautifulsoup4->bs4->-r requirements.txt (line 8))
+  Using cached typing_extensions-4.12.2-py3-none-any.whl.metadata (3.0 kB)
+Collecting setuptools (from zope.interface->datetime->-r requirements.txt (line 3))
+  Using cached setuptools-78.0.2-py3-none-any.whl.metadata (6.6 kB)
+Using cached argparse-1.4.0-py2.py3-none-any.whl (23 kB)
+Using cached httpx-0.28.1-py3-none-any.whl (73 kB)
+Using cached httpcore-1.0.7-py3-none-any.whl (78 kB)
+Downloading DateTime-5.5-py3-none-any.whl (52 kB)
+Downloading opencv_python-4.11.0.86-cp37-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (63.0 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 63.0/63.0 MB 31.4 MB/s eta 0:00:00
+Using cached requests-2.32.3-py3-none-any.whl (64 kB)
+Downloading ImageHash-4.3.2-py2.py3-none-any.whl (296 kB)
+Downloading scrape_search_engine-0.2.2-py3-none-any.whl (6.6 kB)
+Using cached bs4-0.0.2-py2.py3-none-any.whl (1.2 kB)
+Using cached certifi-2025.1.31-py3-none-any.whl (166 kB)
+Using cached charset_normalizer-3.4.1-cp313-cp313-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (144 kB)
+Using cached idna-3.10-py3-none-any.whl (70 kB)
+Downloading numpy-2.2.4-cp313-cp313-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (16.1 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 16.1/16.1 MB 33.8 MB/s eta 0:00:00
+Using cached urllib3-2.3.0-py3-none-any.whl (128 kB)
+Using cached anyio-4.9.0-py3-none-any.whl (100 kB)
+Using cached beautifulsoup4-4.13.3-py3-none-any.whl (186 kB)
+Using cached pillow-11.1.0-cp313-cp313-manylinux_2_28_x86_64.whl (4.5 MB)
+Downloading pytz-2025.1-py2.py3-none-any.whl (507 kB)
+Downloading pywavelets-1.8.0-cp313-cp313-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (4.5 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.5/4.5 MB 20.5 MB/s eta 0:00:00
+Downloading scipy-1.15.2-cp313-cp313-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (37.3 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 37.3/37.3 MB 32.9 MB/s eta 0:00:00
+Downloading zope.interface-7.2-cp313-cp313-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (264 kB)
+Using cached h11-0.14.0-py3-none-any.whl (58 kB)
+Using cached sniffio-1.3.1-py3-none-any.whl (10 kB)
+Using cached soupsieve-2.6-py3-none-any.whl (36 kB)
+Using cached typing_extensions-4.12.2-py3-none-any.whl (37 kB)
+Using cached setuptools-78.0.2-py3-none-any.whl (1.3 MB)
+Installing collected packages: scrape-search-engine, pytz, argparse, urllib3, typing-extensions, soupsieve, sniffio, setuptools, pillow, numpy, idna, h11, charset-normalizer, certifi, zope.interface, scipy, requests, PyWavelets, opencv-python, httpcore, beautifulsoup4, anyio, imagehash, httpx, datetime, bs4
+Successfully installed PyWavelets-1.8.0 anyio-4.9.0 argparse-1.4.0 beautifulsoup4-4.13.3 bs4-0.0.2 certifi-2025.1.31 charset-normalizer-3.4.1 datetime-5.5 h11-0.14.0 httpcore-1.0.7 httpx-0.28.1 idna-3.10 imagehash-4.3.2 numpy-2.2.4 opencv-python-4.11.0.86 pillow-11.1.0 pytz-2025.1 requests-2.32.3 scipy-1.15.2 scrape-search-engine-0.2.2 setuptools-78.0.2 sniffio-1.3.1 soupsieve-2.6 typing-extensions-4.12.2 urllib3-2.3.0 zope.interface-7.2
+Probando instalación de Eyes...
+Procesando Blackbird...
+Instalando Blackbird...
+Collecting requests
+  Using cached requests-2.32.3-py3-none-any.whl.metadata (4.6 kB)
+Collecting beautifulsoup4
+  Using cached beautifulsoup4-4.13.3-py3-none-any.whl.metadata (3.8 kB)
+Collecting colorama
+  Using cached colorama-0.4.6-py2.py3-none-any.whl.metadata (17 kB)
+Collecting aiohttp==3.9.3 (from -r requirements.txt (line 1))
+  Downloading aiohttp-3.9.3.tar.gz (7.5 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 7.5/7.5 MB 5.8 MB/s eta 0:00:00
+  Installing build dependencies ... done
+  Getting requirements to build wheel ... done
+  Preparing metadata (pyproject.toml) ... done
+Collecting aiosignal==1.3.1 (from -r requirements.txt (line 2))
+  Downloading aiosignal-1.3.1-py3-none-any.whl.metadata (4.0 kB)
+Collecting annotated-types==0.7.0 (from -r requirements.txt (line 3))
+  Downloading annotated_types-0.7.0-py3-none-any.whl.metadata (15 kB)
+Collecting asyncio==3.4.3 (from -r requirements.txt (line 4))
+  Using cached asyncio-3.4.3-py3-none-any.whl.metadata (1.7 kB)
+Collecting attrs==23.2.0 (from -r requirements.txt (line 5))
+  Downloading attrs-23.2.0-py3-none-any.whl.metadata (9.5 kB)
+Collecting beautifulsoup4
+  Using cached beautifulsoup4-4.12.3-py3-none-any.whl.metadata (3.8 kB)
+Collecting blis==1.0.1 (from -r requirements.txt (line 7))
+  Downloading blis-1.0.1.tar.gz (3.6 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.6/3.6 MB 20.8 MB/s eta 0:00:00
+  Installing build dependencies ... done
+  Getting requirements to build wheel ... done
+  Preparing metadata (pyproject.toml) ... done
+Collecting catalogue==2.0.10 (from -r requirements.txt (line 8))
+  Downloading catalogue-2.0.10-py3-none-any.whl.metadata (14 kB)
+Collecting certifi==2024.2.2 (from -r requirements.txt (line 9))
+  Downloading certifi-2024.2.2-py3-none-any.whl.metadata (2.2 kB)
+Collecting chardet==5.2.0 (from -r requirements.txt (line 10))
+  Using cached chardet-5.2.0-py3-none-any.whl.metadata (3.4 kB)
+Collecting charset-normalizer==3.3.2 (from -r requirements.txt (line 11))
+  Downloading charset_normalizer-3.3.2-py3-none-any.whl.metadata (33 kB)
+Collecting click==8.1.7 (from -r requirements.txt (line 12))
+  Downloading click-8.1.7-py3-none-any.whl.metadata (3.0 kB)
+Collecting cloudpathlib==0.20.0 (from -r requirements.txt (line 13))
+  Downloading cloudpathlib-0.20.0-py3-none-any.whl.metadata (14 kB)
+Collecting confection==0.1.5 (from -r requirements.txt (line 15))
+  Downloading confection-0.1.5-py3-none-any.whl.metadata (19 kB)
+Collecting cymem==2.0.10 (from -r requirements.txt (line 16))
+  Downloading cymem-2.0.10-cp313-cp313-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (8.4 kB)
+Collecting frozenlist==1.4.1 (from -r requirements.txt (line 17))
+  Downloading frozenlist-1.4.1-py3-none-any.whl.metadata (12 kB)
+Collecting greenlet==3.0.3 (from -r requirements.txt (line 18))
+  Downloading greenlet-3.0.3.tar.gz (182 kB)
+  Installing build dependencies ... done
+  Getting requirements to build wheel ... done
+  Preparing metadata (pyproject.toml) ... done
+Collecting idna==3.6 (from -r requirements.txt (line 19))
+  Downloading idna-3.6-py3-none-any.whl.metadata (9.9 kB)
+Collecting Jinja2==3.1.4 (from -r requirements.txt (line 20))
+  Downloading jinja2-3.1.4-py3-none-any.whl.metadata (2.6 kB)
+Collecting langcodes==3.5.0 (from -r requirements.txt (line 21))
+  Downloading langcodes-3.5.0-py3-none-any.whl.metadata (29 kB)
+Collecting language_data==1.3.0 (from -r requirements.txt (line 22))
+  Downloading language_data-1.3.0-py3-none-any.whl.metadata (4.3 kB)
+Collecting marisa-trie==1.2.1 (from -r requirements.txt (line 23))
+  Downloading marisa_trie-1.2.1-cp313-cp313-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (9.0 kB)
+Collecting markdown-it-py==3.0.0 (from -r requirements.txt (line 24))
+  Downloading markdown_it_py-3.0.0-py3-none-any.whl.metadata (6.9 kB)
+Collecting MarkupSafe==3.0.2 (from -r requirements.txt (line 25))
+  Using cached MarkupSafe-3.0.2-cp313-cp313-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (4.0 kB)
+Collecting mdurl==0.1.2 (from -r requirements.txt (line 26))
+  Downloading mdurl-0.1.2-py3-none-any.whl.metadata (1.6 kB)
+Collecting multidict==6.0.5 (from -r requirements.txt (line 27))
+  Downloading multidict-6.0.5-py3-none-any.whl.metadata (4.2 kB)
+Collecting murmurhash==1.0.11 (from -r requirements.txt (line 28))
+  Downloading murmurhash-1.0.11-cp313-cp313-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (2.0 kB)
+Collecting numpy==2.0.2 (from -r requirements.txt (line 29))
+  Downloading numpy-2.0.2.tar.gz (18.9 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 18.9/18.9 MB 36.5 MB/s eta 0:00:00
+  Installing build dependencies ... done
+  Getting requirements to build wheel ... done
+  Installing backend dependencies ... done
+  Preparing metadata (pyproject.toml) ... done
+WARNING: Retrying (Retry(total=4, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ProtocolError('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))': /simple/packaging/                                                                                                      
+Collecting packaging==24.2 (from -r requirements.txt (line 30))                                                                                                      
+  Using cached packaging-24.2-py3-none-any.whl.metadata (3.2 kB)
+Collecting pillow==10.2.0 (from -r requirements.txt (line 31))
+  WARNING: Retrying (Retry(total=4, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ProtocolError('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))': /packages/f8/3e/32cbd0129a28686621434cbf17bb64bf1458bfb838f1f668262fefce145c/pillow-10.2.0.tar.gz                     
+  Downloading pillow-10.2.0.tar.gz (46.2 MB)                                                                                                                         
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 46.2/46.2 MB 790.8 kB/s eta 0:00:00
+  Installing build dependencies ... done
+  Getting requirements to build wheel ... error
+  error: subprocess-exited-with-error
+  
+  × Getting requirements to build wheel did not run successfully.
+  │ exit code: 1
+  ╰─> [21 lines of output]
+      Traceback (most recent call last):
+        File "/root/OSINTko/Blackbird/venv/lib/python3.13/site-packages/pip/_vendor/pyproject_hooks/_in_process/_in_process.py", line 389, in <module>
+          main()
+          ~~~~^^
+        File "/root/OSINTko/Blackbird/venv/lib/python3.13/site-packages/pip/_vendor/pyproject_hooks/_in_process/_in_process.py", line 373, in main
+          json_out["return_val"] = hook(**hook_input["kwargs"])
+                                   ~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+        File "/root/OSINTko/Blackbird/venv/lib/python3.13/site-packages/pip/_vendor/pyproject_hooks/_in_process/_in_process.py", line 143, in get_requires_for_build_wheel
+          return hook(config_settings)
+        File "/tmp/pip-build-env-rwj1xtxt/overlay/lib/python3.13/site-packages/setuptools/build_meta.py", line 334, in get_requires_for_build_wheel
+          return self._get_build_requires(config_settings, requirements=[])
+                 ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        File "/tmp/pip-build-env-rwj1xtxt/overlay/lib/python3.13/site-packages/setuptools/build_meta.py", line 304, in _get_build_requires
+          self.run_setup()
+          ~~~~~~~~~~~~~~^^
+        File "/tmp/pip-build-env-rwj1xtxt/overlay/lib/python3.13/site-packages/setuptools/build_meta.py", line 320, in run_setup
+          exec(code, locals())
+          ~~~~^^^^^^^^^^^^^^^^
+        File "<string>", line 31, in <module>
+        File "<string>", line 28, in get_version
+      KeyError: '__version__'
+      [end of output]
+  
+  note: This error originates from a subprocess, and is likely not a problem with pip.
+error: subprocess-exited-with-error
+
+× Getting requirements to build wheel did not run successfully.
+│ exit code: 1
+╰─> See above for output.
+
+note: This error originates from a subprocess, and is likely not a problem with pip.
+Procesando TheHarvester...
+TheHarvester está instalado y funcionando correctamente.
+Procesando GitSint...
+Instalando GitSint...
+Collecting httpx (from -r requirements.txt (line 1))
+  Using cached httpx-0.28.1-py3-none-any.whl.metadata (7.1 kB)
+Collecting bs4 (from -r requirements.txt (line 2))
+  Using cached bs4-0.0.2-py2.py3-none-any.whl.metadata (411 bytes)
+Collecting argparse (from -r requirements.txt (line 3))
+  Using cached argparse-1.4.0-py2.py3-none-any.whl.metadata (2.8 kB)
+Collecting anyio (from httpx->-r requirements.txt (line 1))
+  Using cached anyio-4.9.0-py3-none-any.whl.metadata (4.7 kB)
+Collecting certifi (from httpx->-r requirements.txt (line 1))
+  Using cached certifi-2025.1.31-py3-none-any.whl.metadata (2.5 kB)
+Collecting httpcore==1.* (from httpx->-r requirements.txt (line 1))
+  Using cached httpcore-1.0.7-py3-none-any.whl.metadata (21 kB)
+Collecting idna (from httpx->-r requirements.txt (line 1))
+  Using cached idna-3.10-py3-none-any.whl.metadata (10 kB)
+Collecting h11<0.15,>=0.13 (from httpcore==1.*->httpx->-r requirements.txt (line 1))
+  Using cached h11-0.14.0-py3-none-any.whl.metadata (8.2 kB)
+Collecting beautifulsoup4 (from bs4->-r requirements.txt (line 2))
+  Using cached beautifulsoup4-4.13.3-py3-none-any.whl.metadata (3.8 kB)
+Collecting sniffio>=1.1 (from anyio->httpx->-r requirements.txt (line 1))
+  Using cached sniffio-1.3.1-py3-none-any.whl.metadata (3.9 kB)
+Collecting soupsieve>1.2 (from beautifulsoup4->bs4->-r requirements.txt (line 2))
+  Using cached soupsieve-2.6-py3-none-any.whl.metadata (4.6 kB)
+Collecting typing-extensions>=4.0.0 (from beautifulsoup4->bs4->-r requirements.txt (line 2))
+  Using cached typing_extensions-4.12.2-py3-none-any.whl.metadata (3.0 kB)
+Using cached httpx-0.28.1-py3-none-any.whl (73 kB)
+Using cached httpcore-1.0.7-py3-none-any.whl (78 kB)
+Using cached bs4-0.0.2-py2.py3-none-any.whl (1.2 kB)
+Using cached argparse-1.4.0-py2.py3-none-any.whl (23 kB)
+Using cached anyio-4.9.0-py3-none-any.whl (100 kB)
+Using cached idna-3.10-py3-none-any.whl (70 kB)
+Using cached beautifulsoup4-4.13.3-py3-none-any.whl (186 kB)
+Using cached certifi-2025.1.31-py3-none-any.whl (166 kB)
+Using cached h11-0.14.0-py3-none-any.whl (58 kB)
+Using cached sniffio-1.3.1-py3-none-any.whl (10 kB)
+Using cached soupsieve-2.6-py3-none-any.whl (36 kB)
+Using cached typing_extensions-4.12.2-py3-none-any.whl (37 kB)
+Installing collected packages: argparse, typing-extensions, soupsieve, sniffio, idna, h11, certifi, httpcore, beautifulsoup4, anyio, httpx, bs4
+Successfully installed anyio-4.9.0 argparse-1.4.0 beautifulsoup4-4.13.3 bs4-0.0.2 certifi-2025.1.31 h11-0.14.0 httpcore-1.0.7 httpx-0.28.1 idna-3.10 sniffio-1.3.1 soupsieve-2.6 typing-extensions-4.12.2
+Probando instalación de GitSint...
+Instalando holehe con pipx...
+  installed package holehe 1.61, installed using Python 3.13.2
+  These apps are now globally available
+    - holehe
+done! ✨ 🌟 ✨
+Probando instalación de holehe...
+Instalando ghunt con pipx...
+  installed package ghunt 2.3.3, installed using Python 3.13.2
+  These apps are now globally available
+    - ghunt
+done! ✨ 🌟 ✨
+Probando instalación de ghunt...
+Instalando toutatis con pipx...
+  installed package toutatis 1.31, installed using Python 3.13.2
+  These apps are now globally available
+    - toutatis
+done! ✨ 🌟 ✨
+Probando instalación de toutatis...
+Instalando osint con pipx...
+  installed package osint 0.5, installed using Python 3.13.2
+  These apps are now globally available
+    - osint
+done! ✨ 🌟 ✨
+Probando instalación de osint...
+Instalando socialscan con pipx...
+  installed package socialscan 2.0.1, installed using Python 3.13.2
+  These apps are now globally available
+    - socialscan
+done! ✨ 🌟 ✨
+Probando instalación de socialscan...
+Instalando/actualizando instaloader desde repositorios de Kali...
+The following packages were automatically installed and are no longer required:
+  ca-certificates-mono    libglvnd-dev                         libmono-system-enterpriseservices4.0-cil                     libwebrtc-audio-processing1
+  cli-common              libgtksourceview-3.0-1               libmono-system-numerics4.0-cil                               libx265-209
+  firebird3.0-common      libgtksourceview-3.0-common          libmono-system-runtime-serialization-formatters-soap4.0-cil  mono-4.0-gac
+  firebird3.0-common-doc  libgtksourceviewmm-3.0-0v5           libmono-system-security4.0-cil                               mono-gac
+  libbfio1                libgumbo2                            libmono-system-transactions4.0-cil                           mono-runtime
+  libc++1-19              libjxl0.9                            libmono-system-windows-forms4.0-cil                          mono-runtime-common
+  libc++abi1-19           libmbedcrypto7t64                    libmono-system-xml4.0-cil                                    mono-runtime-sgen
+  libcapstone4            libmono-accessibility4.0-cil         libmono-system4.0-cil                                        openjdk-23-jre
+  libconfig++9v5          libmono-btls-interface4.0-cil        libmono-webbrowser4.0-cil                                    openjdk-23-jre-headless
+  libconfig9              libmono-corlib4.5-cil                libmsgraph-0-1                                               python3-appdirs
+  libdirectfb-1.7-7t64    libmono-corlib4.5-dll                libpaper1                                                    python3-ntlm-auth
+  libegl-dev              libmono-i18n-west4.0-cil             libpython3.12-dev                                            python3.12
+  libflac12t64            libmono-i18n4.0-cil                  libqt5sensors5                                               python3.12-dev
+  libfmt9                 libmono-posix4.0-cil                 libqt5webkit5                                                python3.12-minimal
+  libgdiplus              libmono-security4.0-cil              libsuperlu6                                                  python3.12-venv
+  libgl1-mesa-dev         libmono-system-configuration4.0-cil  libtag1v5                                                    ruby3.1
+  libgles-dev             libmono-system-core4.0-cil           libtag1v5-vanilla                                            ruby3.1-dev
+  libgles1                libmono-system-data4.0-cil           libtagc0                                                     ruby3.1-doc
+  libglvnd-core-dev       libmono-system-drawing4.0-cil        libunwind-19
+Use 'sudo apt autoremove' to remove them.
+
+Installing:
+  instaloader
+                                                                                                                                                                     
+Summary:
+  Upgrading: 0, Installing: 1, Removing: 0, Not Upgrading: 505
+  Download size: 59.9 kB
+  Space needed: 322 kB / 58.8 GB available
+
+Get:1 http://http.kali.org/kali kali-rolling/main amd64 instaloader all 4.14.1+ds-1 [59.9 kB]
+Fetched 59.9 kB in 1s (41.5 kB/s)      
+Selecting previously unselected package instaloader.
+(Reading database ... 440854 files and directories currently installed.)
+Preparing to unpack .../instaloader_4.14.1+ds-1_all.deb ...
+Unpacking instaloader (4.14.1+ds-1) ...
+Setting up instaloader (4.14.1+ds-1) ...
+Processing triggers for man-db (2.13.0-1) ...
+Processing triggers for kali-menu (2025.1.1) ...
+Probando instalación de instaloader...
+Instalando nexfil con pipx...
+  installed package nexfil 1.0.6, installed using Python 3.13.2
+  These apps are now globally available
+    - nexfil
+done! ✨ 🌟 ✨
+Probando instalación de nexfil...
+Instalando social-analyzer con pipx...
+  installed package social-analyzer 0.45, installed using Python 3.13.2
+  These apps are now globally available
+    - social-analyzer
+done! ✨ 🌟 ✨
+Probando instalación de social-analyzer...
+Instalando twint...
+error: externally-managed-environment
+
+× This environment is externally managed
+╰─> To install Python packages system-wide, try apt install
+    python3-xyz, where xyz is the package you are trying to
+    install.
+    
+    If you wish to install a non-Kali-packaged Python package,
+    create a virtual environment using python3 -m venv path/to/venv.
+    Then use path/to/venv/bin/python and path/to/venv/bin/pip. Make
+    sure you have pypy3-venv installed.
+    
+    If you wish to install a non-Kali-packaged Python application,
+    it may be easiest to use pipx install xyz, which will manage a
+    virtual environment for you. Make sure you have pipx installed.
+    
+    For more information, refer to the following:
+    * https://www.kali.org/docs/general-use/python3-external-packages/
+    * /usr/share/doc/python3.13/README.venv
+
+note: If you believe this is a mistake, please contact your Python installation or OS distribution provider. You can override this, at the risk of breaking your Python installation or OS, by passing --break-system-packages.
+hint: See PEP 668 for the detailed specification.
+Instalando whatsmyname...
+error: externally-managed-environment
+
+× This environment is externally managed
+╰─> To install Python packages system-wide, try apt install
+    python3-xyz, where xyz is the package you are trying to
+    install.
+    
+    If you wish to install a non-Kali-packaged Python package,
+    create a virtual environment using python3 -m venv path/to/venv.
+    Then use path/to/venv/bin/python and path/to/venv/bin/pip. Make
+    sure you have pypy3-venv installed.
+    
+    If you wish to install a non-Kali-packaged Python application,
+    it may be easiest to use pipx install xyz, which will manage a
+    virtual environment for you. Make sure you have pipx installed.
+    
+    For more information, refer to the following:
+    * https://www.kali.org/docs/general-use/python3-external-packages/
+    * /usr/share/doc/python3.13/README.venv
+
+note: If you believe this is a mistake, please contact your Python installation or OS distribution provider. You can override this, at the risk of breaking your Python installation or OS, by passing --break-system-packages.
+hint: See PEP 668 for the detailed specification.
+shodan está instalado pero no funciona correctamente. Reinstalando...
+error: externally-managed-environment
+
+× This environment is externally managed
+╰─> To install Python packages system-wide, try apt install
+    python3-xyz, where xyz is the package you are trying to
+    install.
+    
+    If you wish to install a non-Kali-packaged Python package,
+    create a virtual environment using python3 -m venv path/to/venv.
+    Then use path/to/venv/bin/python and path/to/venv/bin/pip. Make
+    sure you have pypy3-venv installed.
+    
+    If you wish to install a non-Kali-packaged Python application,
+    it may be easiest to use pipx install xyz, which will manage a
+    virtual environment for you. Make sure you have pipx installed.
+    
+    For more information, refer to the following:
+    * https://www.kali.org/docs/general-use/python3-external-packages/
+    * /usr/share/doc/python3.13/README.venv
+
+note: If you believe this is a mistake, please contact your Python installation or OS distribution provider. You can override this, at the risk of breaking your Python installation or OS, by passing --break-system-packages.
+hint: See PEP 668 for the detailed specification.
+Instalando shodan...
+error: externally-managed-environment
+
+× This environment is externally managed
+╰─> To install Python packages system-wide, try apt install
+    python3-xyz, where xyz is the package you are trying to
+    install.
+    
+    If you wish to install a non-Kali-packaged Python package,
+    create a virtual environment using python3 -m venv path/to/venv.
+    Then use path/to/venv/bin/python and path/to/venv/bin/pip. Make
+    sure you have pypy3-venv installed.
+    
+    If you wish to install a non-Kali-packaged Python application,
+    it may be easiest to use pipx install xyz, which will manage a
+    virtual environment for you. Make sure you have pipx installed.
+    
+    For more information, refer to the following:
+    * https://www.kali.org/docs/general-use/python3-external-packages/
+    * /usr/share/doc/python3.13/README.venv
+
+note: If you believe this is a mistake, please contact your Python installation or OS distribution provider. You can override this, at the risk of breaking your Python installation or OS, by passing --break-system-packages.
+hint: See PEP 668 for the detailed specification.
+
+=== RESUMEN DETALLADO DE INSTALACIÓN ===
+
+Herramientas instaladas exitosamente (25):
+DNSRecon
+EmailHarvester
+Eyes
+ghunt
+GitSint
+H8mail
+holehe
+Inspector
+instaloader
+Maigret
+Masto
+nexfil
+osint
+Osintgram
+PhoneInfoga
+Photon
+Phunter
+Sherlock
+social-analyzer
+socialscan
+Spiderfoot
+TheHarvester
+toutatis
+UserFinder
+Zehef
+
+Herramientas que fallaron (6):
+AliensEye
+Blackbird
+Profil3r
+shodan
+twint
+whatsmyname
+
+Detalles de errores por categoría:
+
+1. Errores de Entorno Virtual:
+
+2. Errores de Dependencias:
+
+3. Errores de Clonación:
+- AliensEye: Error al clonar repositorio
+
+4. Errores de Ejecución:
+
+5. Otros Errores:
+- AliensEye: Error al clonar repositorio
+- Profil3r: Error al instalar dependencias
+- Blackbird: Error al instalar dependencias específicas
+- twint: Error al instalar con pip
+- whatsmyname: Error al instalar con pip
+- shodan: Error al instalar con pip
+
+Recomendaciones para resolver errores comunes:
+1. Para errores de entorno virtual:
+   - Asegúrate de tener python3-venv instalado
+   - Verifica los permisos del directorio
+   - Intenta crear el entorno virtual manualmente
+2. Para errores de dependencias:
+   - Actualiza pip: pip install --upgrade pip
+   - Verifica la compatibilidad de versiones
+   - Intenta instalar las dependencias manualmente
+3. Para errores de clonación:
+   - Verifica tu conexión a internet
+   - Asegúrate de que el repositorio existe y es accesible
+4. Para errores de ejecución:
+   - Verifica que la herramienta está en el PATH
+   - Comprueba los permisos de ejecución
+   - Revisa los logs de error específicos
+
+Instalación/actualización completada.
+Algunas herramientas fallaron. Revisa las recomendaciones anteriores para resolver los problemas.
+Nota: Se han respetado las instalaciones existentes de Kali Linux y se han actualizado según fue necesario.
+Nota: Para usuarios de KDE, GNOME o Xfce, cierra sesión y vuelve a iniciar o usa una herramienta de actualización de menú para que los cambios aparezcan.
+                                                                                      
